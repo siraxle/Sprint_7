@@ -2,20 +2,27 @@ import io.qameta.allure.Step;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 import static io.restassured.RestAssured.given;
 
-public class CourierHelper extends BaseTest {
-
+public class CourierHelper {
+    private String LOGIN_URN = "/api/v1/courier/login";
+    private String COURIER_URN = "/api/v1/courier/";
 
     @Step("Courier authorization with login '{login}' and password '{password}'")
     public Response loginCourier(String login, String password) {
+        Map<String, Object> body = new HashMap<>();
+        body.put("login", login);
+        body.put("password", password);
+
         return given()
                 .contentType(ContentType.JSON)
-                .body("{\"login\": \"" + login + "\", \"password\": \"" + password + "\"}")
+                .body(body)
                 .when()
-                .post("/api/v1/courier/login");
+                .post(BaseTest.BASE_URL + LOGIN_URN);
     }
 
     @Step("Generate Unique Login")
@@ -36,46 +43,27 @@ public class CourierHelper extends BaseTest {
     }
 
 
-    @Step("Creating a courier with a unique login, password and firstName")
-    public String[] createCourier() {
-        String uniqueLogin = generateUniqueLogin();
-        String password = generatePassword();
-        String firstName = generateFirstName();
-
-        given()
-                .header("Content-type", "application/json")
-                .body("{\"login\":\"" + uniqueLogin + "\",\"password\":\"" + password + "\",\"firstName\":\"" + firstName + "\"}")
-                .when()
-                .post("/api/v1/courier")
-                .then()
-                .statusCode(201);
-        return new String[]{uniqueLogin, password, firstName};
-    }
-
     @Step("Delete a courier")
     public void deleteCourier(String courierId) {
+        Map<String, Object> body = new HashMap<>();
+        body.put("id", courierId);
+
         given()
                 .header("Content-type", "application/json")
-                .body("{\n" +
-                        "    \"id\": \"" + courierId + "\"\n" +
-                        "}")
+                .body(body)
                 .when()
-                .delete("/api/v1/courier/" + courierId)
+                .delete(BaseTest.BASE_URL + COURIER_URN + courierId)
                 .then()
                 .statusCode(200);
     }
 
-
-    @Step("Creating a courier with a seted uniqueLogin, password and firstName")
-    public Response createCourier(String uniqueLogin, String password, String firstName) {
+    @Step("Creating a courier")
+    public Response createCourier(CourierCreateRequest courierCreateRequest) {
         return given()
                 .header("Content-type", "application/json")
-                .body("{\"login\":\"" + uniqueLogin + "\",\"password\":\"" + password + "\",\"firstName\":\"" + firstName + "\"}")
+                .body(courierCreateRequest)
                 .when()
-                .post("/api/v1/courier");
+                .post(BaseTest.BASE_URL + COURIER_URN);
     }
-
-
-
 
 }

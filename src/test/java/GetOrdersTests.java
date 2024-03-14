@@ -5,10 +5,11 @@ import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
-
+import static org.hamcrest.Matchers.*;
 @DisplayName("Getting the list of orders tests")
-public class GetOrdersTests extends CourierHelper {
+public class GetOrdersTests extends BaseTest {
 
+    private final String ORDERS_URN = "/api/v1/orders";
     @Test
     @DisplayName("Getting the list of orders")
     @Description("Test of order list retrieval")
@@ -16,8 +17,11 @@ public class GetOrdersTests extends CourierHelper {
         Response ordersResponse = given()
                 .contentType(ContentType.JSON)
                 .when()
-                .get("/api/v1/orders");
-        ordersResponse.then().statusCode(200);
+                .get(ORDERS_URN);
+        ordersResponse
+                .then().statusCode(200)
+                .assertThat()
+                .body("", hasKey("orders"));
     }
 
 }

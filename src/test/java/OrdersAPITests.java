@@ -1,15 +1,12 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.*;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -17,7 +14,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 @RunWith(Parameterized.class)
 @DisplayName("Tests for Orders API")
 public class OrdersAPITests extends BaseTest {
-
+    private final String ORDERS_URN = "/api/v1/orders";
     private final String firstName;
     private final String lastName;
     private final String address;
@@ -68,44 +65,35 @@ public class OrdersAPITests extends BaseTest {
 
     @Step("Order creating")
     public Response createOrder() {
-        String jsonBody = createOrderJson();
+        Map<String, Object> body = createOrderJson();
         return given()
                 .header("Content-type", "application/json")
-                .body(jsonBody)
+                .body(body)
                 .when()
-                .post("/api/v1/orders");
+                .post(ORDERS_URN);
     }
 
 
     @Step("Json creating for order request")
-    private String createOrderJson() {
-        String colorJson = "null";
-        if (colors != null) {
-            StringBuilder colorsBuilder = new StringBuilder("[");
-            for (int i = 0; i < colors.length; i++) {
-                colorsBuilder.append("\"").append(colors[i]).append("\"");
-                if (i < colors.length - 1) {
-                    colorsBuilder.append(",");
-                }
-            }
-            colorsBuilder.append("]");
-            colorJson = colorsBuilder.toString();
+    private Map<String, Object> createOrderJson() {
+        Map<String, Object> orderDetails = new HashMap<>();
+        orderDetails.put("firstName", firstName);
+        orderDetails.put("lastName", lastName);
+        orderDetails.put("address", address);
+        orderDetails.put("metroStation", metroStation);
+        orderDetails.put("phone", phone);
+        orderDetails.put("rentTime", rentTime);
+        orderDetails.put("deliveryDate", deliveryDate);
+        orderDetails.put("comment", comment);
+
+        if (colors != null && colors.length > 0) {
+            List<String> colorList = Arrays.asList(colors);
+            orderDetails.put("color", colorList);
+        } else {
+            orderDetails.put("color", Collections.emptyList());
         }
 
-        return String.format(
-                "{" +
-                        "\"firstName\":\"%s\"," +
-                        "\"lastName\":\"%s\"," +
-                        "\"address\":\"%s\"," +
-                        "\"metroStation\":%d," +
-                        "\"phone\":\"%s\"," +
-                        "\"rentTime\":%d," +
-                        "\"deliveryDate\":\"%s\"," +
-                        "\"comment\":\"%s\"," +
-                        "\"color\":%s" +
-                        "}",
-                firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, colorJson
-        );
+        return orderDetails;
     }
 
 }
