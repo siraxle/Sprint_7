@@ -14,7 +14,8 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 @RunWith(Parameterized.class)
 @DisplayName("Tests for Orders API")
 public class OrdersAPITests extends BaseTest {
-    private final String ORDERS_URN = "/api/v1/orders";
+
+    private static final OrdersHelper ORDER_HELPER = new OrdersHelper();
     private final String firstName;
     private final String lastName;
     private final String address;
@@ -56,44 +57,10 @@ public class OrdersAPITests extends BaseTest {
     @DisplayName("Creating an order")
     @Description("The test checks the successful creation of an order with 1 color, all colors, or no color specified")
     public void testCreateOrder() {
-        Response response = createOrder();
+        Response response = ORDER_HELPER.createOrder(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, colors);
 
         response.then()
                 .statusCode(201)
                 .body("track", notNullValue());
     }
-
-    @Step("Order creating")
-    public Response createOrder() {
-        Map<String, Object> body = createOrderJson();
-        return given()
-                .header("Content-type", "application/json")
-                .body(body)
-                .when()
-                .post(ORDERS_URN);
-    }
-
-
-    @Step("Json creating for order request")
-    private Map<String, Object> createOrderJson() {
-        Map<String, Object> orderDetails = new HashMap<>();
-        orderDetails.put("firstName", firstName);
-        orderDetails.put("lastName", lastName);
-        orderDetails.put("address", address);
-        orderDetails.put("metroStation", metroStation);
-        orderDetails.put("phone", phone);
-        orderDetails.put("rentTime", rentTime);
-        orderDetails.put("deliveryDate", deliveryDate);
-        orderDetails.put("comment", comment);
-
-        if (colors != null && colors.length > 0) {
-            List<String> colorList = Arrays.asList(colors);
-            orderDetails.put("color", colorList);
-        } else {
-            orderDetails.put("color", Collections.emptyList());
-        }
-
-        return orderDetails;
-    }
-
 }

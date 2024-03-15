@@ -9,9 +9,10 @@ import java.util.Random;
 import static io.restassured.RestAssured.given;
 
 public class CourierHelper {
-    private String LOGIN_URN = "/api/v1/courier/login";
-    private String COURIER_URN = "/api/v1/courier/";
+    private static final String LOGIN_URN = "/api/v1/courier/login";
+    private static final String COURIER_URN = "/api/v1/courier/";
 
+    private static final String BASE_URL = BaseTest.BASE_URL;
     @Step("Courier authorization with login '{login}' and password '{password}'")
     public Response loginCourier(String login, String password) {
         Map<String, Object> body = new HashMap<>();
@@ -22,7 +23,7 @@ public class CourierHelper {
                 .contentType(ContentType.JSON)
                 .body(body)
                 .when()
-                .post(BaseTest.BASE_URL + LOGIN_URN);
+                .post(BASE_URL + LOGIN_URN);
     }
 
     @Step("Generate Unique Login")
@@ -52,7 +53,7 @@ public class CourierHelper {
                 .header("Content-type", "application/json")
                 .body(body)
                 .when()
-                .delete(BaseTest.BASE_URL + COURIER_URN + courierId)
+                .delete(BASE_URL + COURIER_URN + courierId)
                 .then()
                 .statusCode(200);
     }
@@ -63,7 +64,7 @@ public class CourierHelper {
                 .header("Content-type", "application/json")
                 .body(courierCreateRequest)
                 .when()
-                .post(BaseTest.BASE_URL + COURIER_URN);
+                .post(BASE_URL + COURIER_URN);
     }
 
 }
