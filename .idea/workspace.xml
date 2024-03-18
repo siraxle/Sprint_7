@@ -4,11 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bcc6a95-e8d2-4c73-bebc-622c62602b43" name="Changes" comment="" />
+    <list default="true" id="5bcc6a95-e8d2-4c73-bebc-622c62602b43" name="Changes" comment="removed DataGenerator.java">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourierCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourierCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourierHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourierHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CourierLoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourierLoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GetOrdersTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GetOrdersTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/OrdersAPITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OrdersAPITests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/009c5dd4-d693-4733-a3cc-f8b6cce1d713-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/06e03cdb-39cc-49b1-bb1a-eed05946ab93-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/1236c913-2622-4687-a7b9-4230b12cd80a-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/30772aa9-5a2f-4c52-a4d3-6a5a51b29d83-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3adcdf22-4711-45c8-925b-27e9ef26a5ec-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/3ba45aa3-a1ea-4346-a215-1da0374ab0a5-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/49287c89-a862-41c2-b6db-adca36dd6bcf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/4c714d52-0e35-40b5-9ab5-6e8e15145e62-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/59eb4dae-fe38-4cfb-9989-24a014408d84-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7bff8620-7fe8-46b6-aaf1-f15a464e042c-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/7f59d313-c2d0-4e18-a01b-2f9c8ce0a084-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/90e78bf6-d66c-4cde-a9a5-b934b04ec983-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a6cc4dd1-a696-4349-8bd5-9d81559c584b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/a93af4c5-17b3-4ac4-971a-97b2207626a4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/acddf106-55d0-4f91-9d02-c8edaa9f8735-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/allure.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/allure-results/allure.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/b7331825-c1e2-4384-b481-b322d2ed0c16-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d4e1aeae-2529-48b8-90eb-e4a41d4e7d24-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d64124c2-c1a2-463c-a25e-44dff57e8bdf-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/allure-results/d9b604e8-79b7-487f-8525-f9aafeeec5c3-result.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2da5iS7hb5zpuP1e7iKkyg9chbv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -18,13 +64,81 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/eefremov/IdeaProjects/practicum/Sprint_7/src/main&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\eefremov\IdeaProjects\practicum\Sprint_7\src\main" />
+      <recent name="C:\Users\eefremov\IdeaProjects\practicum\Sprint_7\src\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.GetOrdersTests.testGetOrders">
+    <configuration name="CourierLoginTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CourierLoginTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierLoginTests.testLoginWithoutPasswordField" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CourierLoginTests" />
+      <option name="METHOD_NAME" value="testLoginWithoutPasswordField" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourierLoginTests.testSuccessfulLoginReturnsId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CourierLoginTests" />
+      <option name="METHOD_NAME" value="testSuccessfulLoginReturnsId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetOrdersTests.testGetOrders" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GetOrdersTests" />
+      <option name="METHOD_NAME" value="testGetOrders" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrdersAPITests.testCreateOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OrdersAPITests" />
+      <option name="METHOD_NAME" value="testCreateOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GetOrdersTests.testGetOrders" />
+        <item itemvalue="JUnit.OrdersAPITests.testCreateOrder" />
+        <item itemvalue="JUnit.CourierLoginTests" />
+        <item itemvalue="JUnit.CourierLoginTests.testSuccessfulLoginReturnsId" />
+        <item itemvalue="JUnit.CourierLoginTests.testLoginWithoutPasswordField" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -33,7 +147,45 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710233476771</updated>
+      <workItem from="1710233479065" duration="1334000" />
+      <workItem from="1710237345833" duration="939000" />
+      <workItem from="1710274998262" duration="3954000" />
+      <workItem from="1710400019231" duration="5315000" />
     </task>
+    <task id="LOCAL-00001" summary="add pom.xml">
+      <created>1710233731990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710233731990</updated>
+    </task>
+    <task id="LOCAL-00002" summary="removed DataGenerator.java">
+      <created>1710237444641</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237444641</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add pom.xml" />
+    <MESSAGE value="removed DataGenerator.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed DataGenerator.java" />
   </component>
 </project>
